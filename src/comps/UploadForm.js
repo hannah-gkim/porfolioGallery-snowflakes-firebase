@@ -5,12 +5,13 @@ const UploadForm = () => {
   //useState(null)[0] === file
   //file===useState(null)[0]
   const [file, setFile] = useState(null);
-  const types = ["image/png", "image/jpeg"];
   const [error, setError] = useState(null);
+
+  const types = ["image/png", "image/jpeg"];
 
   const changeHandler = (e) => {
     let selected = e.target.files[0];
-    console.log(selected);
+    //console.log(selected);
 
     if (selected && types.includes(selected.type)) {
       setFile(selected);
@@ -31,6 +32,7 @@ const UploadForm = () => {
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}
+        {/* we only show progressbar, if the file is there, */}
         {file && <ProgressBar file={file} setFile={setFile} />}
       </div>
     </form>

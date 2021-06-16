@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
-import { projectStorage } from "../firebase/config";
+import { projectStorage, projectFirestore } from "../firebase/config";
 
 const useStorage = (file) => {
-  const [progress, setProgress] = useState[0];
+  //progress is like...
+  // this.state={progress: 0 }
+  // setProgress is like..
+  // this.setState({progress: this.state.progress + 10 })
+  const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
