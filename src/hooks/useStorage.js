@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import { projectStorage, projectFirestore } from "../firebase/config";
+import {
+  projectStorage,
+  projectFirestore,
+  timeStamp,
+} from "../firebase/config";
 
 const useStorage = (file) => {
   //progress is like...
@@ -18,6 +22,7 @@ const useStorage = (file) => {
     const storageRef = projectStorage.ref(file.name);
     //uploading the file to the reference "projectStorage.ref(file.name)"
     //below is aynchronous, so we will attach a listner to it, which is going to fire the func when certain event happens(file upload req)
+    const collectionRef = projectFirestore.collection("images");
 
     //event we are listening to is 'state_changed' whenever state/event is changed, we will fire func(the second arg)
     // snap shot is an obj? it is the snap of the upload the moment??
@@ -37,6 +42,9 @@ const useStorage = (file) => {
       async () => {
         //this does not override url var above since it is a separate scope
         const url = await storageRef.getDownloadURL();
+        const createdAt = timeStamp();
+        //once the upload is complete, we are creating new documnet inside firestore.collection
+        await collectionRef.add({ url, createdAt });
         setUrl(url);
       }
     );
