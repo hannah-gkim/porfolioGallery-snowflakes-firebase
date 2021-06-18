@@ -6,24 +6,32 @@ import {
 } from "../firebase/config";
 
 const useStorage = (file) => {
-  //progress is like...
-  // this.state={progress: 0 }
-  // setProgress is like..
-  // this.setState({progress: this.state.progress + 10 })
+  /*
+  combined reducer or state={
+    progress:0;
+    error:null;
+    url:null;
+  }
+  */
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
-  //thunk..?? every time dependency changes(recieve request to upload new file), it will fire the function to upload the file
+  //every time dependency changes(recieve request to upload new file), it will fire the function to upload the file
+  //useEffect is like setState?? using thunks and incoming data...?
   useEffect(() => {
-    //where should the file be saved
     // what we are doing is to create a reference to a file inside the default firebase storage bucket?
     //file doesnt exit yet, we are just saying using this reference, the file should have the name (file.name) inside the default bucket.
+
     const storageRef = projectStorage.ref(file.name);
+    // ===projectFirestore.collection(collection)
+    //==={firestore:{...},...} 
+
     //uploading the file to the reference "projectStorage.ref(file.name)"
+
     //below is aynchronous, so we will attach a listner to it, which is going to fire the func when certain event happens(file upload req)
     const collectionRef = projectFirestore.collection("images");
-
+  
     //event we are listening to is 'state_changed' whenever state/event is changed, we will fire func(the second arg)
     // snap shot is an obj? it is the snap of the upload the moment??
     storageRef.put(file).on(
