@@ -1,14 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const SinglePic = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
-    setSelectedImg(null);
+    if (e.target.classList.contains("backdrop")) {
+      setSelectedImg(null);
+    }
   };
 
   return (
-    <div className="backdrop" onClick={handleClick}>
+    <motion.div
+      className="backdrop"
+      onClick={handleClick}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <img src={selectedImg} alt="single pic" />
-    </div>
+    </motion.div>
   );
 };
 
