@@ -125,3 +125,13 @@ label:hover {
   display: inline-block;
   margin: 1em;
 }
+
+/* Landing page */
+.landingPage-div {
+  display: flex;
+  justify-content: center;
+}
+.landingPage-div img {
+  height: 500px;
+  width: 350px;
+}
