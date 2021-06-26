@@ -9,9 +9,7 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
     }
   };
 
-  const { docs } = useFirestore("images");
-
-  const handleDelete = () => {};
+  //const { docs } = useFirestore("images");
 
   return (
     <motion.div
@@ -21,7 +19,6 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
       animate={{ opacity: 1 }}
     >
       <img src={selectedImg} alt="single pic" />
-      <div>{/* <button onClick={handleDelete}>Delete</button> */}</div>
     </motion.div>
   );
 };

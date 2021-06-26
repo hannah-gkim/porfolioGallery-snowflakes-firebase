@@ -45,35 +45,5 @@ const useFirestore = (collection) => {
   }, [collection]);
   return { docs }; //-> { docs:[{...}, {...}...] }
 };
-// so long story... useFirestore
-//returns like reducer? { docs:[{...}, {...}...] }
-
-// const deleteStorage = (collection, id) => {
-//   const [docs, setDocs] = useState([]);
-
-//   useEffect(() => {
-
-//     const unsub = projectFirestore
-//       .collection(collection)
-//       .orderBy("createdAt", "desc")
-//       .doc(id)
-//       .delete()
-//       .onSnapshot((snap) => {
-//         //snap take a look at firestore data the moment of snap =>{firestore:{...},...} snap is an obj
-//         let documents = [];
-//         //why forEach for an obj??
-//         snap.forEach((doc) => {
-//           //getting data from firesotre and storing at docs state
-//           documents.push({ ...doc.data(), id: doc.id });
-//         });
-//         //[  {createdAt:..,id:...},{},...  ]
-//         setDocs(documents);
-//       });
-
-//     //clenan up fuction, once documents is save do the state
-//     return () => unsub();
-//   }, [collection]);
-//   return { docs }; //-> { docs:[{...}, {...}...] }
-// };
 
 export default useFirestore;
