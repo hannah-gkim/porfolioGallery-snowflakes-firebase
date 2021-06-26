@@ -4,7 +4,6 @@ import { projectFirestore } from "../firebase/config";
 import useFirestore from "../hooks/useFirestore";
 
 const SinglePic = ({ selectedImg, setSelectedImg }) => {
-  
   const handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
       setSelectedImg(null);
@@ -19,6 +18,7 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
       let docUrl = doc.url;
       if (docUrl === selectedImg) {
         projectFirestore.collection("hannah").doc(doc.id).delete();
+        setSelectedImg(null);
       }
     }
   };
@@ -30,8 +30,8 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <img src={selectedImg} alt="single pic" />
       <button onClick={handleDelete}>delete</button>
+      <img src={selectedImg} alt="single pic" />
     </motion.div>
   );
 };

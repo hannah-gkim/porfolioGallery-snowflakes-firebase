@@ -124,11 +124,3 @@ label:hover {
   height: 500px;
   width: 350px;
 }
-
-/*image grid adding delete button*/
-.img-delete {
-  display: block;
-  position: relative;
-  text-align: center;
-  margin-top: 70px;
-}
