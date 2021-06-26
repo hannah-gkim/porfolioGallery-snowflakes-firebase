@@ -26,12 +26,13 @@ const useStorage = (file) => {
     const storageRef = projectStorage.ref(file.name);
     // ===projectFirestore.collection(collection)
     //==={firestore:{...},...}
+    console.log("cliked +, this is storageRef-->", storageRef);
 
     //uploading the file to the reference "projectStorage.ref(file.name)"
 
     //below is aynchronous, so we will attach a listner to it, which is going to fire the func when certain event happens(file upload req)
     const collectionRef = projectFirestore.collection("images");
-
+    console.log("this is where collection is created?-->", collectionRef);
     //event we are listening to is 'state_changed' whenever state/event is changed, we will fire func(the second arg)
     // snap shot is an obj? it is the snap of the upload the moment??
     storageRef.put(file).on(
@@ -57,7 +58,6 @@ const useStorage = (file) => {
       }
     );
   }, [file]);
-
 
   return { progress, url, error };
 };

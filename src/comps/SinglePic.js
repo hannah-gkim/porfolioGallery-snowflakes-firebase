@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import useFirestore from "../hooks/useFirestore";
 
 const SinglePic = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
@@ -7,6 +8,10 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
       setSelectedImg(null);
     }
   };
+
+  const { docs } = useFirestore("images");
+
+  const handleDelete = () => {};
 
   return (
     <motion.div
@@ -16,6 +21,7 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
       animate={{ opacity: 1 }}
     >
       <img src={selectedImg} alt="single pic" />
+      <div>{/* <button onClick={handleDelete}>Delete</button> */}</div>
     </motion.div>
   );
 };

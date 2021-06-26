@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <img src="https://wallpaperaccess.com/full/4785873.jpg" />
+    <div className="landingPage-div">
+      <Link to="/hannah">
+        <img src="https://wallpaperaccess.com/full/4785873.jpg" />
+      </Link>
     </div>
   );
 }
