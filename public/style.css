@@ -115,17 +115,6 @@ label:hover {
   border: 3px solid white;
 }
 
-/* NavBar
-.nav-div {
-  margin: 1em;
-  display: inline-block;
-}
-
-.nav a {
-  display: inline-block;
-  margin: 1em;
-}
-
 /* Landing page */
 .landingPage-div {
   display: flex;
@@ -134,4 +123,12 @@ label:hover {
 .landingPage-div img {
   height: 500px;
   width: 350px;
+}
+
+/*image grid adding delete button*/
+.img-delete {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-top: 70px;
 }

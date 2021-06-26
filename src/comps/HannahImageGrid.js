@@ -2,8 +2,9 @@ import React from "react";
 import useFirestore from "../hooks/useFirestore";
 import { motion } from "framer-motion";
 
-const ImageGrid = ({ setSelectedImg }) => {
-  const { docs } = useFirestore("images");
+const HannahImageGrid = ({ setSelectedImg }) => {
+  const { docs } = useFirestore("hannah");
+
   return (
     <div className="img-grid">
       {docs &&
@@ -14,11 +15,9 @@ const ImageGrid = ({ setSelectedImg }) => {
             layout
             whileHover={{ opacity: 1 }}
             onClick={() => {
-              //console.log(doc.id);
               return setSelectedImg(doc.url);
             }}
           >
-      
             <motion.img
               src={doc.url}
               alt="uploaded picture"
@@ -32,4 +31,4 @@ const ImageGrid = ({ setSelectedImg }) => {
   );
 };
 
-export default ImageGrid;
+export default HannahImageGrid;
