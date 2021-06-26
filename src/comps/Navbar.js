@@ -6,7 +6,6 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
-import "../../public/style.css";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
