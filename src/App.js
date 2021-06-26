@@ -1,5 +1,4 @@
 import React from "react";
-import LandingPage from "./comps/LandingPage";
 import Navbar from "./comps/Navbar";
 import Routes from "./Routes";
 import CssBaseline  from '@material-ui/core/CssBaseline';

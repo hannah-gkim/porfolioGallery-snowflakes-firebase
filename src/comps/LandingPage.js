@@ -5,7 +5,10 @@ function LandingPage() {
   return (
     <div className="landingPage-div">
       <Link to="/hannah">
-        <img src="https://wallpaperaccess.com/full/4785873.jpg" />
+        <img
+          alt="hannahGallery"
+          src="https://wallpaperaccess.com/full/4785873.jpg"
+        />
       </Link>
     </div>
   );
