@@ -22,19 +22,26 @@ const UploadForm = () => {
   };
 
   return (
-    <form>
-      <label>
-        <input type="file" onChange={handleChange} />
-        <span>+</span>
-      </label>
-
-      <div className="output">
-        {error && <div className="error">{error}</div>}
-        {file && <div>{file.name}</div>}
-        {/* we only show progressbar, if the file is there, */}
-        {file && <ProgressBar file={file} setFile={setFile} />}
+    <div>
+      <div className="title">
+        {/* <h1>HannahGram</h1> */}
+        <h2>By Hannah</h2>
+        <p>If you can dream it, you can do it - Walt Disney</p>
       </div>
-    </form>
+      <form>
+        <label>
+          <input type="file" onChange={handleChange} />
+          <span>+</span>
+        </label>
+
+        <div className="output">
+          {error && <div className="error">{error}</div>}
+          {file && <div>{file.name}</div>}
+          {/* we only show progressbar, if the file is there, */}
+          {file && <ProgressBar file={file} setFile={setFile} />}
+        </div>
+      </form>
+    </div>
   );
 };
 

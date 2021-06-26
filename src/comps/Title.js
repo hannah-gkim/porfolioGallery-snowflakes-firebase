@@ -1,13 +1,13 @@
-import React from "react";
+// import React from "react";
 
-const Title = () => {
-  return (
-    <div className="title">
-      {/* <h1>HannahGram</h1> */}
-      <h2>By Hannah</h2>
-      <p>If you can dream it, you can do it - Walt Disney</p>
-    </div>
-  );
-};
+// const Title = () => {
+//   return (
+//     <div className="title">
+//       {/* <h1>HannahGram</h1> */}
+//       <h2>By Hannah</h2>
+//       <p>If you can dream it, you can do it - Walt Disney</p>
+//     </div>
+//   );
+// };
 
-export default Title;
+// export default Title;
