@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { projectFirestore } from "../firebase/config";
 import useFirestore from "../hooks/useFirestore";
+import Button from '@material-ui/core/Button'
 
 const SinglePic = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
@@ -30,7 +31,7 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <button onClick={handleDelete}>delete</button>
+      <Button onClick={handleDelete}>delete</Button>
       <img src={selectedImg} alt="single pic" />
     </motion.div>
   );
