@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Title from "./Title";
 import UploadForm from "./UploadForm";
-import ImageGrid from "./ImageGrid";
-import SinglePic from "./SinglePic";
+import HannahImageGrid from "./HannahImageGrid";
+import SinglePic from "./HannahSinglePic";
 
 function HannahGallery() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -11,7 +11,7 @@ function HannahGallery() {
     <div className="App">
       <Title />
       <UploadForm />
-      <ImageGrid setSelectedImg={setSelectedImg} />
+      <HannahImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <SinglePic selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}
