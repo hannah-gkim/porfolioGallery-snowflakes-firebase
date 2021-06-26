@@ -21,7 +21,7 @@ export default function Navbar() {
         <Toolbar>
           <Link to="/">
             <Typography variant="h4" color="secondary" noWrap>
-              Hannah
+              Snow Flakes
             </Typography>
           </Link>
 
