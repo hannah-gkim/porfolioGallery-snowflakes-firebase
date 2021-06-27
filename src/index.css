@@ -180,3 +180,14 @@ label:hover {
   display: flex;
   justify-content: center;
 }
+
+/* gird-box */
+.grid-box {
+  /* padding-right: min(50px, 5%); */
+  padding-right: max(15px, 10%);
+  /* padding-right: clamp(15px, 5%, 50px); */
+
+  /* padding-left: min(50px, 5%); */
+  padding-left: max(15px, 10%);
+  /* padding-left: clamp(15px, 5%, 50px); */
+}
