@@ -135,11 +135,11 @@ label:hover {
   height: auto;
 }
 
-.landingPage-div {
+.hannahlandingPage-div {
   display: flex;
   justify-content: center;
 }
-.landingPage-div img {
+.hannahlandingPage-div img {
   height: 500px;
   width: 350px;
 }
