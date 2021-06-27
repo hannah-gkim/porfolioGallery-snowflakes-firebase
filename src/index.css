@@ -45,13 +45,14 @@ label {
   width: 30px;
   height: 30px;
   border: 1px solid var(--primary);
+  color: var(--primary);
   border-radius: 50%;
   margin: 10px auto;
   line-height: 19px;
-  color: var(--primary);
   font-weight: bold;
   font-size: 24px;
 }
+
 label:hover {
   background: var(--primary);
   color: white;
@@ -123,4 +124,35 @@ label:hover {
 .landingPage-div img {
   height: 500px;
   width: 350px;
+}
+
+/* login style */
+.email {
+  color: black;
+  border: transparent;
+  width: 0;
+  height: 0;
+  border-radius: 0%;
+  line-height: 0;
+  font-weight: normal;
+  font-size: 13px;
+  display: contents;
+}
+.password {
+  color: black;
+  border: transparent;
+  width: 0;
+  height: 0;
+  border-radius: 0%;
+  line-height: 0;
+  font-weight: normal;
+  font-size: 13px;
+  margin: 0;
+  display: contents;
+}
+.email:hover {
+  color: black;
+}
+.password:hover {
+  color: black;
 }

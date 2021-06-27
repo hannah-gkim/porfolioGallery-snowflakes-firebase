@@ -28,9 +28,9 @@ const UploadForm = () => {
         <h2>By Hannah</h2>
         <p>If you can dream it, you can do it - Walt Disney</p>
       </div>
-      <form>
+      <form className="uploadForm">
         <label>
-          <input type="file" onChange={handleChange} />
+          <input className="uploadInput" type="file" onChange={handleChange} />
           <span>+</span>
         </label>
 
