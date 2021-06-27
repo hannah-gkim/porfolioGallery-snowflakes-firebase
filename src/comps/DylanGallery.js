@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Title from "./Title";
+import TitleDylan from "./TitleDylan";
 import UploadForm from "./UploadForm";
 import DylanImageGrid from "./DylanImageGrid";
 import SinglePic from "./DylanSinglePic";
@@ -9,7 +9,7 @@ function DylanGallery() {
 
   return (
     <div className="App">
-      {/* <Title /> */}
+      <TitleDylan />
       <UploadForm />
       <DylanImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
