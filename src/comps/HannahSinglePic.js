@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { projectFirestore } from "../firebase/config";
 import useFirestore from "../hooks/useFirestore";
-import Button from '@material-ui/core/Button'
+// import Button from "@material-ui/core/Button";
+import { Button } from "react-bootstrap";
+import { useAuth } from "../hooks/AuthContext";
 
 const SinglePic = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
@@ -12,6 +14,8 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
   };
 
   const { docs } = useFirestore("hannah");
+
+  const { currentUser } = useAuth();
 
   const handleDelete = () => {
     for (let i = 0; i < docs.length; i++) {
@@ -31,8 +35,16 @@ const SinglePic = ({ selectedImg, setSelectedImg }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <Button onClick={handleDelete}>delete</Button>
       <img src={selectedImg} alt="single pic" />
+      {currentUser ? (
+        <div className="image-and-button">
+          <button className="delete-button" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
+      ) : (
+        <div></div>
+      )}
     </motion.div>
   );
 };
