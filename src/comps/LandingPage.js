@@ -25,9 +25,10 @@ function LandingPage() {
           />
       </Link>
     </div>
+    <span></span>
       <div>
       <Link to="/dylan">
-      <img src="https://previews.dropbox.com/p/thumb/ABOBMmXqkLylKz4npdlX5PVitUtJv-UzO2im9jDeSlksYjALyHjy-oZr8T2a5BoWozgtXHRJyxlVz0BZ-mbIn827A51MG70p-FVr5-Kgu0G8SfM0F70JlMFMUJ9YptGyGYJJtw4QRdNvaYB55uAAJONccLFOR9a1QqKNuO2CWdjwtZ5oa2P6Qyi3nb6879Da2r8H9mrSMVUhzW2FgEJ2Oxr4kvbO3_zstVx3HHtEvI4HH0unYsV8ZO44AUanJZcejBxrhOB389Va_itK8QV_qlFmFz0VaxFLrIDCoO4BkVh2ZScIlLMQqvBd94jNSeWiS-q4l5iqYX7mQeKN_dLkddOgkha6G_b9G0hd1teicplg0Q/p.jpeg" width="1040" height="780" />
+      <img src="https://previews.dropbox.com/p/thumb/ABOBMmXqkLylKz4npdlX5PVitUtJv-UzO2im9jDeSlksYjALyHjy-oZr8T2a5BoWozgtXHRJyxlVz0BZ-mbIn827A51MG70p-FVr5-Kgu0G8SfM0F70JlMFMUJ9YptGyGYJJtw4QRdNvaYB55uAAJONccLFOR9a1QqKNuO2CWdjwtZ5oa2P6Qyi3nb6879Da2r8H9mrSMVUhzW2FgEJ2Oxr4kvbO3_zstVx3HHtEvI4HH0unYsV8ZO44AUanJZcejBxrhOB389Va_itK8QV_qlFmFz0VaxFLrIDCoO4BkVh2ZScIlLMQqvBd94jNSeWiS-q4l5iqYX7mQeKN_dLkddOgkha6G_b9G0hd1teicplg0Q/p.jpeg" width="500" height="350" />
       </Link>
       </div>
           </div>
