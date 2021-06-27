@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
 import { useAuth } from "../hooks/AuthContext";
 import { Button } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);

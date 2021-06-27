@@ -7,11 +7,13 @@ const HannahImageGrid = ({ setSelectedImg }) => {
   const { docs } = useFirestore("hannah");
 
   return (
-    <Box className="grid-box"
-      style={{
-        
-        // marginLeft: "15%", marginRight: "15%"
-      }}
+    <Box
+      className="grid-box"
+      style={
+        {
+          // marginLeft: "15%", marginRight: "15%"
+        }
+      }
     >
       <div className="img-grid">
         {docs &&
