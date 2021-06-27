@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Title from "./Title";
+import TitleHannah from "./TitleHannah";
 import UploadForm from "./UploadForm";
 import HannahImageGrid from "./HannahImageGrid";
 import SinglePic from "./HannahSinglePic";
@@ -9,7 +9,7 @@ function HannahGallery() {
 
   return (
     <div className="App">
-      {/* <Title /> */}
+      <TitleHannah />
       <UploadForm />
       <HannahImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (

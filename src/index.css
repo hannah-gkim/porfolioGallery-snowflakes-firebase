@@ -112,8 +112,16 @@ label:hover {
   max-width: 60%;
   max-height: 80%;
   margin: 60px auto;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+}
+.delete-button {
+  position: absolute;
+  margin-bottom: 400px;
+  margin-left: 48%;
+  margin-right: 60%;
+  background-color: white;
+  border-radius: 8px;
 }
 
 /* Landing page */
@@ -165,4 +173,21 @@ label:hover {
 }
 .password:hover {
   color: black;
+}
+
+/* container */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* gird-box */
+.grid-box {
+  /* padding-right: min(50px, 5%); */
+  padding-right: max(15px, 10%);
+  /* padding-right: clamp(15px, 5%, 50px); */
+
+  /* padding-left: min(50px, 5%); */
+  padding-left: max(15px, 10%);
+  /* padding-left: clamp(15px, 5%, 50px); */
 }
