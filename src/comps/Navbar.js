@@ -54,7 +54,7 @@ function Navbar() {
             <Typography
               edge="start"
               className={classes.title}
-              variant="h3"
+              variant="h4"
               noWrap
             >
               Snowflakes
@@ -62,12 +62,12 @@ function Navbar() {
           </Link>
 
           <Grid item xs container direction="row-reverse">
-            <InstagramIcon style={{ marginTop: "20px", marginRight: "30px" }} />
-            <Button style={{ marginRight: "30px" }} color="inherit">
+            <InstagramIcon style={{ marginTop: "20px", marginRight: "20px" }} />
+            <Button style={{ marginRight: "20px" }} color="inherit">
               Contact
             </Button>
             <Button
-              style={{ marginRight: "20px" }}
+              style={{ marginRight: "10px" }}
               variant="h4"
               className={classes.toolbar}
               edge="end"
