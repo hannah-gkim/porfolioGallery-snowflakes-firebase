@@ -8,13 +8,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Container>
+    <div>
       <CssBaseline />
       <div className="App">
         <Navbar />
         <Routes />
       </div>
-    </Container>
+    </div>
   );
 }
 
