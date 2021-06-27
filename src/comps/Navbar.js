@@ -10,6 +10,8 @@ import { palette } from "@material-ui/system";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
+import { shadows } from '@material-ui/system';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -25,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     // minHeight: 128,
     // alignItems: "flex-start",
-    // paddingTop: theme.spacing(1),
-    // paddingBottom: theme.spacing(2),
+     paddingTop: theme.spacing(1),
+     paddingBottom: theme.spacing(2),
   },
   title: {
     // flexGrow: 1,
@@ -34,13 +36,14 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     justifyContent: "flex-start",
   },
+  toolbar: theme.mixins.toolbar
 }));
 
 function Navbar() {
   const classes = useStyles();
   return (
-    <AppBar color="transparent">
-      <Toolbar className={classes.toolbar}>
+      <Toolbar   className={classes.toolbar}>
+    <AppBar elevation={0} color="transparent" >
         <Grid container spacing={2} alignItems="center">
           <Link to="/">
             <Typography
@@ -55,15 +58,15 @@ function Navbar() {
           </Link>
 
           <Grid item xs container direction="row-reverse">
-            <CameraIcon />
+            <InstagramIcon />
             <Button color="inherit">Contact</Button>
             <Button variant="h4" className={classes.toolbar} edge="end" noWrap>
               Bio
             </Button>
           </Grid>
         </Grid>
-      </Toolbar>
     </AppBar>
+      </Toolbar>
   );
 }
 
