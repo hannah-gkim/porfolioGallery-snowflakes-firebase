@@ -12,7 +12,7 @@ body {
   color: var(--secondary);
 }
 .App {
-  max-width: 960px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .title h1 {
@@ -116,6 +116,15 @@ label:hover {
 }
 
 /* Landing page */
+
+.landingPage-div2 img{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: auto;
+}
+
 .landingPage-div {
   display: flex;
   justify-content: center;
