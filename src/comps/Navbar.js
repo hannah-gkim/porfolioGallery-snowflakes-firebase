@@ -34,7 +34,13 @@ const useStyles = makeStyles((theme) => ({
     // alignSelf: "flex-end",
     textTransform: "none",
     justifyContent: "flex-start",
+    marginLeft: "30px",
+    color: "#404040",
+    "&:hover": {
+      color: "#A0A0A0",
+    },
   },
+
   toolbar: theme.mixins.toolbar,
 }));
 
@@ -48,8 +54,7 @@ function Navbar() {
             <Typography
               edge="start"
               className={classes.title}
-              color="inherit"
-              variant="h2"
+              variant="h3"
               noWrap
             >
               Snowflakes
@@ -57,9 +62,17 @@ function Navbar() {
           </Link>
 
           <Grid item xs container direction="row-reverse">
-            <InstagramIcon />
-            <Button color="inherit">Contact</Button>
-            <Button variant="h4" className={classes.toolbar} edge="end" noWrap>
+            <InstagramIcon style={{ marginTop: "20px", marginRight: "30px" }} />
+            <Button style={{ marginRight: "30px" }} color="inherit">
+              Contact
+            </Button>
+            <Button
+              style={{ marginRight: "20px" }}
+              variant="h4"
+              className={classes.toolbar}
+              edge="end"
+              noWrap
+            >
               Bio
             </Button>
           </Grid>
