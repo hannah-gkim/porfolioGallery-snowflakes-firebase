@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../firebase/config";
 
-const AuthContext = React.createContext(); //return {} 
+const AuthContext = React.createContext(); //return {}
 
 //React's useContext just uses the Context object -- which you have created before --
 //to retrieve the most recent value from AuthContext.
@@ -12,7 +12,7 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
-   // by default we are loading and once useEffect runs, it  will verify to see if user exist? if user exist we set loading to false....
+  // by default we are loading and once useEffect runs, it  will verify to see if user exist? if user exist we set loading to false....
 
   // if you don't want to use firebase, you only need to change these below to connect to database of your choice
   function signup(email, password) {
@@ -52,12 +52,12 @@ export function AuthProvider({ children }) {
     updatePassword,
   };
 
-  console.log("children before return-->", children);
-  console.log("loading before return-->", loading);
+  // console.log("children before return-->", children);
+  // console.log("loading before return-->", loading);
   return (
     <AuthContext.Provider value={value}>
-        {console.log("children after return-->", children)}
-        {console.log("loading after return-->", loading)}
+      {/* {console.log("children after return-->", children)} */}
+      {/* {console.log("loading after return-->", loading)} */}
       {!loading && children}
     </AuthContext.Provider>
   );
