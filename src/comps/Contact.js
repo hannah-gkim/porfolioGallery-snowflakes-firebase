@@ -1,17 +1,13 @@
 import React from "react";
-
 export default function Contact() {
   return (
     <div>
-      <img
-        style={{
-          textAlign: "center",
-          marginBottom: "20px",
-          marginTop: "50px",
-        }}
-        alt="comingsoon" 
-        src="http://madrasibride.com/wp-content/uploads/2020/10/Comingsoon.png"
-      />
+      <div className="contactDiv">
+        <img
+          alt="comingsoon"
+          src="http://madrasibride.com/wp-content/uploads/2020/10/Comingsoon.png"
+        />
+      </div>
       {/* <h1
         style={{
           textAlign: "center",
