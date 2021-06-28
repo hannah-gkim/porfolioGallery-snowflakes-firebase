@@ -17,7 +17,7 @@ const useStorage = (file) => {
     const storageRef = projectStorage.ref(file.name);
     console.log("cliked +, this is storageRef-->", storageRef);
  
-    const collectionRef = projectFirestore.collection("dylan");
+    const collectionRef = projectFirestore.collection("hannah");
     console.log("this is where collection is created?-->", collectionRef);
  
     storageRef.put(file).on(

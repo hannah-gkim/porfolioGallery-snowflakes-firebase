@@ -10,10 +10,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   Button: {
-    '&:hover': {
-        backgroundColor: '#ffffff',
-        boxShadow: 'none',
-      },
       '&:active': {
         boxShadow: 'none',
         backgroundColor: '#3c52b2',

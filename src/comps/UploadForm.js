@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
 import { useAuth } from "../hooks/AuthContext";
-import { Button } from "react-bootstrap";
+import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
 const UploadForm = () => {
@@ -44,6 +44,7 @@ const UploadForm = () => {
               position: "absolute",
               top: "14%",
               right: "2%",
+              backgroundColor: "#a6d4fa"
             }}
             onClick={handleLogout}
           >
