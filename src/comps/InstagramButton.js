@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
         backgroundColor: '#3c52b2',
       },
+      marginTop: "11px",
+      marginRight: "20px"
 },
 }));
 
@@ -39,7 +41,7 @@ export default function InstagramButton() {
   return (
     <div>
       <Button aria-describedby={id} className={classes.Button} onClick={handleClick}>
-      <InstagramIcon style={{ marginTop: "20px", marginRight: "20px" }} />
+      <InstagramIcon />
       </Button>
       <Popover
         id={id}

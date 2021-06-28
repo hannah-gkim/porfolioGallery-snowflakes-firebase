@@ -77,9 +77,6 @@ function Navbar() {
         </Grid>
       </AppBar>
               </ScrollToColor>
-              {/* <InstagramIcon
-                style={{ marginTop: "16px", marginRight: "20px" }}
-              /> */}
     </Toolbar>
   );
 }
