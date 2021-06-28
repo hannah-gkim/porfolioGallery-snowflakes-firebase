@@ -50,38 +50,51 @@ function Navbar() {
   return (
     <Toolbar className={classes.toolbar}>
       <ScrollToColor01>
-
-      <AppBar elevation={0} color="transparent">
-        <Grid container spacing={2} alignItems="center">
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <Typography
-              edge="start"
-              className={classes.title}
-              variant="h4"
-              noWrap
+        <AppBar elevation={0} color="transparent">
+          <Grid container spacing={2} alignItems="center">
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Typography
+                edge="start"
+                className={classes.title}
+                variant="h4"
+                noWrap
               >
-              Snowflakes
-            </Typography>
-          </Link>
+                Snowflakes
+              </Typography>
+            </Link>
 
-          <Grid item xs container direction="row-reverse">
-            <InstagramIcon style={{ marginTop: "20px", marginRight: "20px" }} />
-            <Button style={{ marginRight: "20px" }} color="inherit">
-              Contact
-            </Button>
-            <Button
-              style={{ marginRight: "10px" }}
-              variant="h4"
-              className={classes.toolbar}
-              edge="end"
-              noWrap
-              >
-              Bio
-            </Button>
+            <Grid item xs container direction="row-reverse">
+              <InstagramIcon
+                style={{ marginTop: "16px", marginRight: "20px" }}
+              />
+
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <Button
+                  style={{ marginRight: "10px" }}
+                  variant="h4"
+                  className={classes.toolbar}
+                  edge="end"
+                  noWrap
+                >
+                  Contact
+                </Button>
+              </Link>
+
+              <Link to="bio" style={{ textDecoration: "none" }}>
+                <Button
+                  style={{ marginRight: "10px" }}
+                  variant="h4"
+                  className={classes.toolbar}
+                  edge="end"
+                  noWrap
+                >
+                  Bio
+                </Button>
+              </Link>
+            </Grid>
           </Grid>
-        </Grid>
-      </AppBar>
-              </ScrollToColor01>
+        </AppBar>
+      </ScrollToColor01>
     </Toolbar>
   );
 }

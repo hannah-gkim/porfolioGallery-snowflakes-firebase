@@ -39,11 +39,10 @@ const UploadForm = () => {
       {currentUser ? (
         <div>
           <Button
-            class="btn btn-light"
             style={{
               margin: "0",
               position: "absolute",
-              top: "12%",
+              top: "14%",
               right: "2%",
             }}
             onClick={handleLogout}
