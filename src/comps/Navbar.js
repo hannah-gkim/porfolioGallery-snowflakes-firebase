@@ -36,7 +36,6 @@ function Navbar() {
   return (
     <Toolbar className={classes.toolbar}>
       <ScrollToColor>
-
       <AppBar elevation={0} >
         <Grid container spacing={2} alignItems="center">
           <Link to="/" style={{ textDecoration: 'none' }}>
@@ -46,28 +45,41 @@ function Navbar() {
               variant="h4"
               noWrap
               >
-              Snowflakes
-            </Typography>
-          </Link>
-
+                Snowflakes
+              </Typography>
+            </Link>
+            
           <Grid item xs container direction="row-reverse">
             <InstagramButton />
-            <Button style={{ marginRight: "20px" }}>
-              Contact
-            </Button>
-            <Button
-              style={{ marginRight: "10px" }}
-              variant="h4"
-              className={classes.toolbar}
-              edge="end"
-              noWrap
-              >
-              Bio
-            </Button>
+            <Link to="/contact" style={{ textDecoration: "none" }}>
+                <Button
+                  style={{ marginRight: "10px" }}
+                  variant="h4"
+                  className={classes.toolbar}
+                  edge="end"
+                  noWrap
+                >
+                  Contact
+                </Button>
+                </Link>
+                <Link to="bio" style={{ textDecoration: "none" }}>
+                <Button
+                  style={{ marginRight: "10px" }}
+                  variant="h4"
+                  className={classes.toolbar}
+                  edge="end"
+                  noWrap
+                >
+                  Bio
+                </Button>
+              </Link>
           </Grid>
         </Grid>
       </AppBar>
               </ScrollToColor>
+              {/* <InstagramIcon
+                style={{ marginTop: "16px", marginRight: "20px" }}
+              /> */}
     </Toolbar>
   );
 }
