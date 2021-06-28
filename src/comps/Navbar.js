@@ -1,15 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
-import { palette } from "@material-ui/system";
-import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
-import { shadows } from "@material-ui/system";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import ScrollToColor01 from "./ScrollToColor";
 

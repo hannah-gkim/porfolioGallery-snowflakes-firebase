@@ -10,10 +10,12 @@ const images = [{
   url: 'https://wallpaperaccess.com/full/4785873.jpg',
   title: 'hannah',
   width: '30%',
+  link: '/hannah'
 }, 
   { url: 'https://i.ibb.co/qyM0FB9/IMG-8700.jpg',
   title: 'dylan',
   width: '30%',
+  link: '/dylan'
   }
 ]
 
