@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Popover, Typography, Button } from '@material-ui/core/Popover';
+import { Popover, Typography, Button } from '@material-ui/core';
 import InstagramIcon from "@material-ui/icons/Instagram";
 
 const useStyles = makeStyles((theme) => ({
