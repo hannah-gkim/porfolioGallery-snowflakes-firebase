@@ -109,6 +109,7 @@ const useStyles = makeStyles((theme) => ({
 
 function LandingPage() {
   const classes = useStyles();
+
   return (
     <>
       <div className={classes.root}>
@@ -145,24 +146,49 @@ function LandingPage() {
                 width: image.width,
               }}
             >
-              <span
-                className={classes.imageSrc}
-                style={{
-                  backgroundImage: `url(${image.url})`,
-                }}
-              />
-              <span className={classes.imageBackdrop} />
-              <span className={classes.imageButton}>
-                <Typography
-                  component="span"
-                  variant="subtitle1"
-                  color="inherit"
-                  className={classes.imageTitle}
-                >
-                  {image.title}
-                  <span className={classes.imageMarked} />
-                </Typography>
-              </span>
+              {image.title === "hannah" ? (
+                <Link to="/hannah">
+                  <span
+                    className={classes.imageSrc}
+                    style={{
+                      backgroundImage: `url(${image.url})`,
+                    }}
+                  />
+                  <span className={classes.imageBackdrop} />
+                  <span className={classes.imageButton}>
+                    <Typography
+                      component="span"
+                      variant="subtitle1"
+                      color="inherit"
+                      className={classes.imageTitle}
+                    >
+                      {image.title}
+                      <span className={classes.imageMarked} />
+                    </Typography>
+                  </span>
+                </Link>
+              ) : (
+                <Link to="/dylan">
+                  <span
+                    className={classes.imageSrc}
+                    style={{
+                      backgroundImage: `url(${image.url})`,
+                    }}
+                  />
+                  <span className={classes.imageBackdrop} />
+                  <span className={classes.imageButton}>
+                    <Typography
+                      component="span"
+                      variant="subtitle1"
+                      color="inherit"
+                      className={classes.imageTitle}
+                    >
+                      {image.title}
+                      <span className={classes.imageMarked} />
+                    </Typography>
+                  </span>
+                </Link>
+              )}
             </ButtonBase>
           ))}
         </Container>
