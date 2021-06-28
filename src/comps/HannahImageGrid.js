@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Box from "@material-ui/core/Box";
 
 const HannahImageGrid = ({ setSelectedImg }) => {
-  const { docs } = useFirestore("hannah");
+  const { docs } = useFirestore("dylan");
 
   return (
     <Box

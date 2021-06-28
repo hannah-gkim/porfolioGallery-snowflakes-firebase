@@ -7,28 +7,18 @@ import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import ScrollToColor01 from "./ScrollToColor";
+import ScrollToColor from "./ScrollToColor";
+import InstagramButton from "./InstagramButton"
 
 const useStyles = makeStyles((theme) => ({
-  navbar: {
-    backgroundColor: "#9CCA91",
-    color: "black",
-  },
-  // root: {
-  //   flexGrow: 1,
-  // },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   toolbar: {
-    // minHeight: 128,
-    // alignItems: "flex-start",
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(2),
   },
   title: {
-    // flexGrow: 1,
-    // alignSelf: "flex-end",
     textTransform: "none",
     justifyContent: "flex-start",
     marginLeft: "30px",
@@ -45,9 +35,9 @@ function Navbar() {
   const classes = useStyles();
   return (
     <Toolbar className={classes.toolbar}>
-      <ScrollToColor01>
+      <ScrollToColor>
 
-      <AppBar elevation={0} color="transparent">
+      <AppBar elevation={0} >
         <Grid container spacing={2} alignItems="center">
           <Link to="/" style={{ textDecoration: 'none' }}>
             <Typography
@@ -61,8 +51,8 @@ function Navbar() {
           </Link>
 
           <Grid item xs container direction="row-reverse">
-            <InstagramIcon style={{ marginTop: "20px", marginRight: "20px" }} />
-            <Button style={{ marginRight: "20px" }} color="inherit">
+            <InstagramButton />
+            <Button style={{ marginRight: "20px" }}>
               Contact
             </Button>
             <Button
@@ -77,7 +67,7 @@ function Navbar() {
           </Grid>
         </Grid>
       </AppBar>
-              </ScrollToColor01>
+              </ScrollToColor>
     </Toolbar>
   );
 }
