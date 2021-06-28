@@ -8,16 +8,6 @@ export default function Contact() {
           src="http://madrasibride.com/wp-content/uploads/2020/10/Comingsoon.png"
         />
       </div>
-      {/* <h1
-        style={{
-          textAlign: "center",
-          marginBottom: "20px",
-          color: "gray",
-          marginTop: "50px",
-        }}
-      >
-        Coming Soon!!
-      </h1> */}
       <h5
         style={{
           textAlign: "center",

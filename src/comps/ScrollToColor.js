@@ -10,8 +10,7 @@ const ScrollHandler = props => {
 
   return React.cloneElement(props.children, {
     style: {
-      backgroundColor: trigger ? "pink" : "transparent",
-      //color: trigger ? "white" : "black",
+      backgroundColor: trigger ? "#a6d4fa" : "transparent",
       transition: trigger ? "0.3s" : "0.5s",
       boxShadow: "none",
       padding: "10px 0px"
@@ -19,8 +18,8 @@ const ScrollHandler = props => {
   });
 };
 
-const ScrollToColor01 = props => {
+const ScrollToColor = props => {
   return <ScrollHandler {...props}>{props.children}</ScrollHandler>;
 };
 
-export default ScrollToColor01;
+export default ScrollToColor;
