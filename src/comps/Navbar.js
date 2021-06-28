@@ -11,6 +11,7 @@ import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
 import { shadows } from "@material-ui/system";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import ScrollToColor01 from "./ScrollToColor";
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -48,15 +49,17 @@ function Navbar() {
   const classes = useStyles();
   return (
     <Toolbar className={classes.toolbar}>
+      <ScrollToColor01>
+
       <AppBar elevation={0} color="transparent">
         <Grid container spacing={2} alignItems="center">
-          <Link to="/">
+          <Link to="/" style={{ textDecoration: 'none' }}>
             <Typography
               edge="start"
               className={classes.title}
               variant="h4"
               noWrap
-            >
+              >
               Snowflakes
             </Typography>
           </Link>
@@ -72,12 +75,13 @@ function Navbar() {
               className={classes.toolbar}
               edge="end"
               noWrap
-            >
+              >
               Bio
             </Button>
           </Grid>
         </Grid>
       </AppBar>
+              </ScrollToColor01>
     </Toolbar>
   );
 }
