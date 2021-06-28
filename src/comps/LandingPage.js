@@ -8,7 +8,7 @@ import { Typography } from "@material-ui/core";
 
 const images = [
   {
-    url: "https://wallpaperaccess.com/full/4785873.jpg",
+    url: "https://firebasestorage.googleapis.com/v0/b/instagram-clone-61bfe.appspot.com/o/IMG_9217.JPG?alt=media&token=c88c08fd-fc7b-4e83-bba5-5b72505f0890",
     title: "hannah",
     width: "500px",
     height: "350px",
@@ -17,7 +17,7 @@ const images = [
     // marginBottom: "70px",
   },
   {
-    url: "https://i.ibb.co/qyM0FB9/IMG-8700.jpg",
+    url: "https://firebasestorage.googleapis.com/v0/b/instagram-clone-61bfe.appspot.com/o/dylan%20sakura.jpeg?alt=media&token=1a3d4557-c93f-404e-b3cb-aaf04c95d0ce",
     title: "dylan",
     width: "500px",
     height: "350px",
