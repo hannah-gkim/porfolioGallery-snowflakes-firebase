@@ -10,7 +10,7 @@ function DylanGallery() {
   return (
     <div className="App">
       <TitleDylan />
-      <UploadForm />
+      <UploadForm collection="dylan" />
       <DylanImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <SinglePic selectedImg={selectedImg} setSelectedImg={setSelectedImg} />

@@ -5,25 +5,21 @@ import {
   timeStamp,
 } from "../firebase/config";
 
-const useStorage = (file) => {
-  
+const useStorage = (file, collection) => {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
-  
   useEffect(() => {
-   
     const storageRef = projectStorage.ref(file.name);
     console.log("cliked +, this is storageRef-->", storageRef);
- 
-    const collectionRef = projectFirestore.collection("hannah");
+
+    const collectionRef = projectFirestore.collection(collection);
     console.log("this is where collection is created?-->", collectionRef);
- 
+
     storageRef.put(file).on(
       "state_changed",
       (snap) => {
-     
         let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
         setProgress(percentage);
       },
