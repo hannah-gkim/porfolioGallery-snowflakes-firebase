@@ -10,7 +10,7 @@ function HannahGallery() {
   return (
     <div className="App">
       <TitleHannah />
-      <UploadForm />
+      <UploadForm collection="hannah"/>
       <HannahImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <SinglePic selectedImg={selectedImg} setSelectedImg={setSelectedImg} />

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 //once upload is done, setFile back to null
 // we know it is uploaded when the url value is available
 // file and setFile props are coming from UploadForm.js
-const ProgressBar = ({ file, setFile }) => {
-  const { progress, url } = useStorage(file);
+const ProgressBar = ({ file, setFile, collection }) => {
+  const { progress, url } = useStorage(file, collection);
   console.log(progress, url);
   //useEffect is like componentDidMount or componentDidUpdate. it tells component that it needs to do something after render.
 

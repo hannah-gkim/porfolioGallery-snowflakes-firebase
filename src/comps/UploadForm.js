@@ -4,7 +4,7 @@ import { useAuth } from "../hooks/AuthContext";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
-const UploadForm = () => {
+const UploadForm = (props) => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
   const types = ["image/png", "image/jpeg"];
@@ -63,7 +63,13 @@ const UploadForm = () => {
               {error && <div className="error">{error}</div>}
               {file && <div>{file.name}</div>}
               {/* we only show progressbar, if the file is there, */}
-              {file && <ProgressBar file={file} setFile={setFile} />}
+              {file && (
+                <ProgressBar
+                  file={file}
+                  setFile={setFile}
+                  collection={props.collection}
+                />
+              )}
             </div>
           </form>
         </div>
