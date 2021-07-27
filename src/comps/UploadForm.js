@@ -12,7 +12,7 @@ const UploadForm = (props) => {
   const { currentUser, logout } = useAuth();
   const history = useHistory();
 
-  async function handleLogout() {
+  async function  handleLogout() {
     setError("");
     try {
       await logout();

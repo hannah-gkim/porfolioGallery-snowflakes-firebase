@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Button, AppBar, Toolbar, Typography } from "@material-ui/core";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import ScrollToColor from "./ScrollToColor";
-import InstagramButton from "./InstagramButton"
+import InstagramButton from "./InstagramButton";
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -29,25 +29,26 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar() {
   const classes = useStyles();
+
   return (
     <Toolbar className={classes.toolbar}>
       <ScrollToColor>
-      <AppBar elevation={0} >
-        <Grid container spacing={2} alignItems="center">
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <Typography
-              edge="start"
-              className={classes.title}
-              variant="h4"
-              noWrap
+        <AppBar elevation={0}>
+          <Grid container spacing={2} alignItems="center">
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Typography
+                edge="start"
+                className={classes.title}
+                variant="h4"
+                noWrap
               >
                 Snowflakes
               </Typography>
             </Link>
-            
-          <Grid item xs container direction="row-reverse">
-            <InstagramButton />
-            <Link to="/contact" style={{ textDecoration: "none" }}>
+
+            <Grid item xs container direction="row-reverse">
+              <InstagramButton />
+              <Link to="/contact" style={{ textDecoration: "none" }}>
                 <Button
                   style={{ marginRight: "10px" }}
                   variant="h4"
@@ -57,8 +58,8 @@ function Navbar() {
                 >
                   Contact
                 </Button>
-                </Link>
-                <Link to="bio" style={{ textDecoration: "none" }}>
+              </Link>
+              <Link to="bio" style={{ textDecoration: "none" }}>
                 <Button
                   style={{ marginRight: "10px" }}
                   variant="h4"
@@ -69,10 +70,22 @@ function Navbar() {
                   Bio
                 </Button>
               </Link>
+
+              <Link to="login" style={{ textDecoration: "none" }}>
+                <Button
+                  style={{ marginRight: "10px" }}
+                  variant="h4"
+                  className={classes.toolbar}
+                  edge="end"
+                  noWrap
+                >
+                  Login
+                </Button>
+              </Link>
+            </Grid>
           </Grid>
-        </Grid>
-      </AppBar>
-              </ScrollToColor>
+        </AppBar>
+      </ScrollToColor>
     </Toolbar>
   );
 }
