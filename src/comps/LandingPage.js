@@ -8,7 +8,7 @@ import { Typography } from "@material-ui/core";
 
 const images = [
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/instagram-clone-61bfe.appspot.com/o/IMG_9217.JPG?alt=media&token=c88c08fd-fc7b-4e83-bba5-5b72505f0890",
+    url: "https://firebasestorage.googleapis.com/v0/b/snowflakes-7d6a3.appspot.com/o/1.jpeg?alt=media&token=a332544a-9ed9-4e31-a3b7-8c5e0fd41450",
     title: "hannah",
     width: "500px",
     height: "350px",
@@ -17,7 +17,7 @@ const images = [
     // marginBottom: "70px",
   },
   {
-    url: "https://firebasestorage.googleapis.com/v0/b/instagram-clone-61bfe.appspot.com/o/dylan%20sakura.jpeg?alt=media&token=1a3d4557-c93f-404e-b3cb-aaf04c95d0ce",
+    url: "https://firebasestorage.googleapis.com/v0/b/snowflakes-7d6a3.appspot.com/o/D1.jpeg?alt=media&token=baf710f9-6076-4420-9c5a-5c20eb69c2bd",
     title: "dylan",
     width: "500px",
     height: "350px",
