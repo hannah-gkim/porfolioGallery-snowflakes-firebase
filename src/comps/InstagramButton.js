@@ -1,6 +1,6 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Popover, Typography, Button } from '@material-ui/core';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Popover, Typography, Button } from "@material-ui/core";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
 const useStyles = makeStyles((theme) => ({
@@ -8,13 +8,13 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   Button: {
-      '&:active': {
-        boxShadow: 'none',
-        backgroundColor: '#3c52b2',
-      },
-      marginTop: "11px",
-      marginRight: "20px"
-},
+    "&:active": {
+      boxShadow: "none",
+      backgroundColor: "#3c52b2",
+    },
+    marginTop: "11px",
+    marginRight: "20px",
+  },
 }));
 
 export default function InstagramButton() {
@@ -30,12 +30,16 @@ export default function InstagramButton() {
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? 'instagram-button' : undefined;
+  const id = open ? "instagram-button" : undefined;
 
   return (
     <div>
-      <Button aria-describedby={id} className={classes.Button} onClick={handleClick}>
-      <InstagramIcon />
+      <Button
+        aria-describedby={id}
+        className={classes.Button}
+        onClick={handleClick}
+      >
+        <InstagramIcon />
       </Button>
       <Popover
         id={id}
@@ -43,18 +47,22 @@ export default function InstagramButton() {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
+          vertical: "bottom",
+          horizontal: "center",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
+          vertical: "top",
+          horizontal: "center",
         }}
       >
         <Typography className={classes.typography}>
-        <a href="https://www.instagram.com/hannah_gkim/" rel="noreferrer">Hannah</a>
-            <p></p>
-            <a href="https://www.instagram.com/infinitesilver/" rel="noreferrer">Dylan</a>
+          <a href="https://www.instagram.com/" rel="noreferrer">
+            Hannah
+          </a>
+          <p></p>
+          <a href="https://www.instagram.com/" rel="noreferrer">
+            Dylan
+          </a>
         </Typography>
       </Popover>
     </div>
